@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>IF I DIDN'T JEET</title>
+<style>
+:root{--bg:#d9f1ff;--panel:#ffffff;--line:#b5dcf5;--tx:#1b1a3a;--mu:#5a6a8e;--g:#ff4fa3;--p:#b57bff;--b:#29b6ff;--y:#ffb300;--r:#ff2e7a;--k:#ff8ad0;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:light}
+html{scroll-behavior:smooth;scroll-padding-top:calc(70px + env(safe-area-inset-top,0px))}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--tx);font:16px/1.5 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;overflow-x:hidden;background-image:linear-gradient(#29b6ff1f 1px,transparent 1px),linear-gradient(90deg,#29b6ff1f 1px,transparent 1px);background-size:32px 32px}
+body:after{content:"";position:fixed;inset:0;pointer-events:none;background:repeating-linear-gradient(#0000 0 3px,#29b6ff0d 4px);z-index:99}
+a{color:inherit}
+section{padding:64px 18px;max-width:1040px;margin:auto}
+h1,h2{font-family:Impact,"Arial Black",sans-serif;text-transform:uppercase;letter-spacing:.02em;margin:0 0 10px;line-height:1.05}
+h1{font-size:clamp(38px,10vw,72px)}h2{font-size:clamp(28px,7vw,44px)}
+.g{background:linear-gradient(90deg,#ff3d9a,#b57bff 50%,#29b6ff);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 0 12px #ff8ad077)}h2{border-left:6px solid var(--k);padding-left:12px}.mu{color:var(--mu)}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:#e6f6ffee;backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.nb{max-width:1040px;margin:auto;display:flex;align-items:center;gap:14px;padding:12px 18px}
+.logo{font-weight:800;text-decoration:none;display:flex;gap:8px;align-items:center}
+.mark{width:22px;height:22px;background:var(--g);clip-path:polygon(0 60%,30% 30%,50% 55%,100% 0,100% 100%,0 100%)}
+.links{display:none;gap:18px;margin-left:auto;align-items:center}.links a{text-decoration:none;color:var(--mu)}
+.live{color:var(--g);font-size:12px}
+.btn{display:inline-block;background:linear-gradient(90deg,#ff8ad0,#8fd8ff);color:#1b1a3a;border:0;padding:14px 20px;font:700 15px inherit;font-family:inherit;text-decoration:none;cursor:pointer;min-height:48px;border-radius:6px}
+.btn.o{background:#ffffffb0;color:var(--tx);border:1px solid var(--line)}.btn:hover{box-shadow:0 0 20px #ff4fa388}
+.burger{margin-left:auto;background:none;border:1px solid var(--line);color:var(--tx);padding:8px 12px;min-height:44px;border-radius:6px;font-size:18px}
+.links.open{display:flex;flex-direction:column;position:absolute;top:100%;left:0;right:0;background:var(--bg);padding:16px 18px;align-items:flex-start;border-bottom:1px solid var(--line)}
+@media(min-width:800px){.links{display:flex}.burger{display:none}}
+.term{background:#1b1a3a;color:#fff;border:2px solid var(--k);border-radius:8px;padding:16px;margin-top:26px;font-size:14px;box-shadow:0 0 30px #ff8ad055}.term .mu{color:#b9c6ea}
+.term div{min-height:1.5em}.term .c{color:var(--g)}
+.chart{height:70px;margin-top:12px}.chart path{stroke:var(--g);fill:none;stroke-width:2;stroke-dasharray:600;animation:d 4s linear infinite}
+@keyframes d{from{stroke-dashoffset:600}to{stroke-dashoffset:0}}
+.tk{overflow:hidden;border-block:1px solid var(--line);background:#fff}
+.tk div{display:flex;gap:40px;width:max-content;padding:12px;animation:s 30s linear infinite;color:var(--mu);white-space:nowrap}
+.tk:hover div,.tk:focus-within div{animation-play-state:paused}.tk b{color:var(--g)}
+@keyframes s{to{transform:translateX(-50%)}}
+.grid{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:18px;transition:.2s}
+.card{border-top:3px solid var(--g)}.card:nth-child(2n){border-top-color:var(--k)}.card:nth-child(3n){border-top-color:var(--b)}.card:nth-child(4n){border-top-color:var(--y)}.card:hover,.card:focus-within{border-color:var(--k);transform:translateY(-3px);box-shadow:0 0 24px #ff8ad066}
+.badge{font-size:11px;padding:2px 8px;border:1px solid;border-radius:99px;color:var(--y)}.badge.LIVE{color:var(--g)}.badge.BUILDING{color:var(--b)}.badge.EXPERIMENT{color:var(--p)}
+.calc{background:var(--panel);border:2px solid var(--g);border-radius:10px;padding:18px;box-shadow:0 0 50px #ff8ad066,0 0 90px #29b6ff33}
+.f{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}
+label{display:block;font-size:12px;color:var(--mu);text-transform:uppercase;margin-bottom:4px}
+input,select{width:100%;background:#f4fbff;border:1px solid var(--line);color:var(--tx);padding:14px;font:18px inherit;font-family:inherit;border-radius:6px;min-height:52px}
+input:focus,select:focus,.btn:focus-visible,a:focus-visible,button:focus-visible{outline:2px solid var(--b);outline-offset:2px}
+.err{color:var(--r);font-size:13px;min-height:18px}
+.row{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
+.tog{display:flex;gap:6px;flex-wrap:wrap;margin:12px 0}.tog button{flex:1;min-width:120px}
+.tog button[aria-pressed=true]{border-color:var(--g);color:var(--g)}
+.note{font-size:13px;color:var(--y);margin-top:6px}
+.share{margin-top:22px;background:linear-gradient(135deg,#ffffff,#ffd9ee 60%,#d6efff);border:2px solid var(--k);border-radius:12px;padding:22px;position:relative;overflow:hidden}
+.share h3{font:clamp(30px,9vw,54px) Impact,sans-serif;margin:6px 0;color:var(--r);text-transform:uppercase}
+.share.esc h3{color:var(--g)}.tag{font-size:12px;color:var(--p)}
+.stats{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:14px 0}.stats div{background:#ffffffb8;padding:10px;border-radius:6px}.stats span{display:block;font-size:11px;color:var(--mu)}.stats b{font-size:18px}
+.bars{display:flex;align-items:flex-end;gap:10px;height:170px;margin:14px 0;border-bottom:1px solid var(--line)}
+.bar{flex:1;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;height:100%;font-size:12px;text-align:center}
+.bar i{display:block;width:100%;min-height:3px;border-radius:4px 4px 0 0;transition:height .5s}
+.dis{border:1px solid var(--y);border-radius:8px;padding:16px;background:#fff8e1;color:#6b4a00;font-size:14px}.dis ul{columns:2 240px;padding-left:18px;margin:8px 0 0}
+footer{border-top:1px solid var(--line);padding:30px 18px;text-align:center;color:var(--mu);font-size:14px}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto}}
+.pix{position:relative;height:58px;overflow:hidden;border-bottom:1px solid var(--line);background:linear-gradient(#0000,#ff8ad033)}
+.pw{position:absolute;bottom:4px;left:-70px;width:44px;animation:walk 16s linear infinite}
+.pw svg{display:block;width:100%;animation:hop .5s steps(2) infinite;shape-rendering:crispEdges}
+.pw.r{animation-direction:reverse}.pw.r svg{transform:scaleX(-1)}
+@keyframes walk{to{left:calc(100% + 70px)}}@keyframes hop{50%{transform:translateY(-10px)}}
+.pw.r svg{animation-name:hop2}@keyframes hop2{0%,100%{transform:scaleX(-1)}50%{transform:scaleX(-1) translateY(-10px)}}
+.lock{text-align:center;border:2px solid var(--b);border-radius:12px;padding:30px 18px;background:linear-gradient(135deg,#e3f6ff,#ffe0f1);box-shadow:0 0 50px #ff8ad055}.lock .lk{font-size:44px;animation:hop .8s steps(2) infinite}.lock .amt{font:clamp(40px,12vw,84px) Impact,sans-serif;text-transform:uppercase;line-height:1.1;margin:6px 0 14px}
+.tmap{display:block;width:100%;max-width:520px;margin:22px auto 0}.trail{animation:tr 1.2s linear infinite}@keyframes tr{to{stroke-dashoffset:-12}}
+</style></head><body>
+<nav><div class="nb"><a class="logo" href="#top"><span class="mark"></span><span id="brand"></span></a><span class="live" id="stat"></span>
+<button class="burger" id="bg" aria-label="Menu" aria-expanded="false">☰</button>
+<div class="links" id="lk"><a href="#liquidity">Liquidity</a><a href="#calc">Calculator</a><a href="#toolkit">Degen Toolkit</a><a href="#contact">Contact</a><a class="btn" href="#contact" style="padding:8px 14px;min-height:0">Let's Build</a></div></div></nav>
+
+<section id="top">
+<span class="mu" id="who"></span>
+<h1>How much did you lose by <span class="g">jeeting?</span></h1>
+<p>Paste your trade. See what your pump.fun bag would be worth if you actually held.</p>
+<div class="row"><a class="btn" href="#calc">CALCULATE MY JEET</a><button class="btn o" id="ex1">VIEW EXAMPLE</button></div>
+<p class="mu" style="font-size:13px">Built for pump.fun traders, paper hands, and everyone who watched their sold coin 10x after they left.</p>
+<div class="term" role="img" aria-label="Terminal intro"><div id="tl"></div>
+<svg class="chart" viewBox="0 0 300 70" preserveAspectRatio="none"><path d="M0 60 L40 55 L70 58 L110 40 L140 45 L180 25 L220 30 L260 8 L300 12"/></svg>
+<div class="mu" style="font-size:11px">DEMO DATA — fictional chart, not a real token.</div></div>
+</section>
+<div class="tk" aria-label="Fictional example tickers"><div id="tkr"></div></div>
+
+<div class="pix" id="pix" aria-hidden="true"></div>
+
+<section id="liquidity"><div class="lock"><div class="lk">🔒</div><div class="mu">LIQUIDITY LOCKED</div><div class="amt"><span class="g" id="lamt"></span></div><div id="lproof"></div><svg class="tmap" viewBox="0 0 400 120" role="img" aria-label="Treasure map showing the liquidity locked at the X"><rect x="2" y="2" width="396" height="116" rx="6" fill="#f2d98a" stroke="#8b5a2b" stroke-width="4"/><g fill="#d9b866"><rect x="30" y="70" width="46" height="26"/><rect x="38" y="62" width="30" height="12"/><rect x="170" y="24" width="52" height="22"/><rect x="178" y="18" width="30" height="10"/><rect x="250" y="76" width="40" height="22"/></g><g fill="#2f9e44"><rect x="48" y="52" width="6" height="14"/><rect x="40" y="48" width="22" height="6"/><rect x="190" y="8" width="6" height="14"/><rect x="182" y="4" width="22" height="6"/></g><path class="trail" d="M22 100 L70 56 L120 88 L190 52 L240 60 L300 34 L340 62" fill="none" stroke="#c0182f" stroke-width="3" stroke-dasharray="6 6"/><path d="M330 52 l20 20 M350 52 l-20 20" stroke="#e5002b" stroke-width="7" stroke-linecap="square"/><text x="340" y="92" text-anchor="middle" font-family="monospace" font-size="11" font-weight="700" fill="#5a3410">LP LOCKED</text><g transform="translate(372 26)" fill="#5a3410"><rect x="-1" y="-14" width="2" height="28"/><rect x="-14" y="-1" width="28" height="2"/><text y="-17" text-anchor="middle" font-family="monospace" font-size="9">N</text></g></svg></div></section>
+
+<section id="calc"><h2>If I didn't <span class="g">jeet</span></h2>
+<p class="mu">See how much your paper hands cost you. For every pump.fun coin you sold before the chart went vertical.</p>
+<div class="calc">
+<div class="tog" role="group" aria-label="Mode"><button class="btn o" id="mMc" aria-pressed="true">MARKET CAP MODE</button><button class="btn o" id="mPr" aria-pressed="false">TOKEN PRICE MODE</button><button class="btn o" id="dg" aria-pressed="false">💀 DEGEN MODE</button></div>
+<div class="f">
+<div><label for="tok">Token</label><input id="tok" placeholder="$MOONCAT" maxlength="20"></div>
+<div><label for="ca">Contract address / pump.fun link</label><input id="ca" placeholder="Paste pump.fun link or CA" autocomplete="off"></div>
+<div><label for="chain">Chain</label><select id="chain"><option>Solana</option><option>Base</option><option>Ethereum</option><option>BNB Chain</option><option>Other</option></select></div>
+</div>
+<p class="note" id="cn" hidden>Automatic token lookup coming soon. For now, enter the market caps manually.</p>
+<div class="f" style="margin-top:12px">
+<div><label for="inv">Amount invested ($)</label><input id="inv" inputmode="decimal" placeholder="50"><div class="err" id="e_inv"></div></div>
+<div><label for="en" id="l_en">Entry market cap</label><input id="en" inputmode="decimal" placeholder="500k"><div class="err" id="e_en"></div></div>
+<div><label for="se" id="l_se">Sell market cap</label><input id="se" inputmode="decimal" placeholder="1m"><div class="err" id="e_se"></div></div>
+<div><label for="cu" id="l_cu">Current market cap</label><input id="cu" inputmode="decimal" placeholder="10m"><div class="err" id="e_cu"></div></div>
+<div><label for="ps">% of position sold (0–100)</label><input id="ps" inputmode="decimal" value="100"><div class="err" id="e_ps"></div></div>
+</div>
+<p class="mu" style="font-size:12px">Tip: type 500k, 1.5m, 2b. Prices like 0.00004 work in price mode.</p>
+<div class="row"><button class="btn o" id="ex2">LOAD EXAMPLE</button><button class="btn o" id="rs">RESET</button></div>
+<div id="out" hidden>
+<div class="share" id="card" aria-live="polite"><div class="tag">IF I DIDN'T JEET · <span id="c_chain"></span></div>
+<h3 id="c_h"></h3><div id="c_lab" style="font-weight:700"></div>
+<p id="c_txt"></p>
+<div class="stats"><div><span>ORIGINAL</span><b id="s_o"></b></div><div><span id="s_vl">VALUE WHEN SOLD</span><b id="s_s"></b></div><div><span id="s_hl">HYPOTHETICAL VALUE</span><b id="s_h"></b></div><div><span>HELD MULTIPLE</span><b id="s_m"></b></div></div>
+<div class="bars" id="bars" role="img" aria-label="Hypothetical position value at entry, sold and current"></div>
+<div class="mu" style="font-size:11px">Hypothetical · linear scale · not financial advice · ifididntjeet</div></div>
+<div class="f" style="margin-top:14px"><div><label for="ph">Share style</label><select id="ph"><option value="I jeeted">I jeeted</option><option value="I paper-handed">I paper-handed</option><option value="I sold too early on">I sold too early</option><option value="I was the exit liquidity on">I was the exit liquidity</option></select></div></div>
+<details style="margin-top:12px"><summary class="mu">Advanced breakdown</summary><div class="stats" id="adv"></div></details>
+<div class="row"><button class="btn" id="cp">COPY RESULT</button><button class="btn o" id="sh">SHARE ON X</button></div><div class="mu" id="msg" role="status"></div>
+</div></div></section>
+
+<section id="toolkit"><h2>The Degen Toolkit</h2><div class="grid" id="tkit"></div></section>
+
+<section><div class="dis"><b>Disclaimer.</b> This calculator is for entertainment and rough historical estimation only. It is not financial advice. No wallet connection, buying, selling or swapping happens here.<ul><li>Market cap does not guarantee executable liquidity</li><li>Historical prices may not have been sellable</li><li>Slippage, fees, taxes and price impact are ignored</li><li>Token supply and contracts can change</li><li>Tokens can be frozen; honeypots can block selling</li><li>Liquidity can disappear; transactions can fail</li><li>MEV can affect execution</li><li>Network fees may apply</li></ul></div></section>
+
+<section id="contact"><h2>Have an idea?</h2><p>Let's build something weird, useful, and probably on-chain.</p><div class="row" id="ct"></div></section>
+<footer><b id="fn"></b><br>Built with curiosity, caffeine, and questionable entries.<br>© 2026 <span id="fy"></span> · <a href="#calc">Disclaimer</a> · <span id="fl"></span></footer>
+
+<script>
+// ===== EDIT THIS BLOCK: all your personal info lives here =====
+const SITE={name:"IfiDidn’tJeetInc",bio:"[YOUR BIO] — replace this with a couple of sentences about you.",location:"[YOUR LOCATION]",chain:"Solana",handle:"[YOUR SOCIAL HANDLE]",status:"Building",focus:"Memecoins + tools",exit:"Still working on it",
+x:"https://x.com/rackenai?s=11",lock:{amount:"17.65",unit:"SOL",proof:""},github:"",telegram:"",discord:"",email:"",
+projects:[{n:"PROJECT 01",t:"[MEMECOIN TOOL]",cat:"Tool",chain:"Solana",tech:"[TECH]",st:"BUILDING"},{n:"PROJECT 02",t:"[TRADING PROJECT]",cat:"Trading",chain:"Solana",tech:"[TECH]",st:"EXPERIMENT"},{n:"PROJECT 03",t:"[AI PROJECT]",cat:"AI",chain:"—",tech:"[TECH]",st:"COMING SOON"},{n:"PROJECT 04",t:"[WEB APP]",cat:"Web",chain:"—",tech:"[TECH]",st:"LIVE"}],
+toolkit:[["Token Launch Checklist","CONCEPT"],["Liquidity Reality Check","COMING SOON"],["Wallet Watcher","CONCEPT"],["Rug Risk Checklist","BUILDING"],["Position Sizing Calculator","COMING SOON"]]};
+// Future live-data hook: return {marketCap,source,timestamp,address,chain,delayed} from a real API. Not connected yet.
+async function lookupToken(ca,chain){return null}
+// ==============================================================
+const $=id=>document.getElementById(id),esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const link=(u,l)=>u?`<a class="btn o" href="${esc(u)}" target="_blank" rel="noopener">${l}</a>`:`<span class="btn o" style="opacity:.5">${l} [add link]</span>`;
+$("brand").textContent="IF I DIDN'T JEET";$("stat").textContent="● BUILDING IN PUBLIC";$("who").innerHTML=`${esc(SITE.name)} — Builder / Trader / Internet Native`;
+$("fn").textContent=SITE.name;$("fy").textContent=SITE.name;
+$("lamt").textContent=SITE.lock.amount+" "+SITE.lock.unit;$("lproof").innerHTML=SITE.lock.proof?`<a class="btn o" href="${esc(SITE.lock.proof)}" target="_blank" rel="noopener">VIEW LOCK PROOF</a>`:"";
+$("tkit").innerHTML=SITE.toolkit.map(t=>`<div class="card"><span class="badge">${t[1]}</span><h3 style="margin:10px 0 0">${t[0]}</h3></div>`).join("");
+$("ct").innerHTML=link(SITE.x,"X");
+$("fl").innerHTML=(SITE.github?`<a href="${esc(SITE.github)}">GitHub</a> · `:"")+(SITE.x?`<a href="${esc(SITE.x)}">X</a>`:"");
+const tk=[["$JEET","SOLD TOO EARLY"],["$COPE","STILL BULLISH"],["$WAGMI","WE ALL MAKE IT"],["$NGMI","MISSED THE ENTRY"],["$PAPER","HANDS DETECTED"],["$HODL","NO SELL BUTTON"],["$EXIT","LIQUIDITY NEEDED"]];
+const tkh=tk.map(t=>`<span><b>${t[0]}</b> — ${t[1]}</span>`).join("");$("tkr").innerHTML=tkh+tkh+`<span class="mu">(fictional examples)</span>`;
+
+// pixel animals
+const PX={frog:[".ww..ww.",".wk..kw.","gggggggg","gggggggg","gggddggg","gggggggg",".gg..gg.","gg....gg"],cat:["cc....cc","cccccccc","cwkccwkc","cccppccc",".cccccc.",".cccccc.",".c.cc.c.",".c....c."],doge:["yy....yy","yyyyyyyy","ykyyyyky","yyyttyyy","yyyyyyyy",".yyyyyy.",".y.yy.y.",".y....y."]};
+const PC={g:"#00ff6a",d:"#00a846",w:"#fff",k:"#111",c:"#c45cff",p:"#ff3df2",y:"#ffe600",t:"#ff9f1c"};
+function pix(m){let r="";m.forEach((row,y)=>[...row].forEach((c,x)=>{if(c!=".")r+=`<rect x="${x}" y="${y}" width="1" height="1" fill="${PC[c]}"/>`}));return`<svg viewBox="0 0 8 8">${r}</svg>`}
+$("pix").innerHTML=[["frog","",0],["cat","r",-6],["doge","",-11],["frog","r",-3],["cat","",-9]].map(a=>`<div class="pw ${a[1]}" style="animation-delay:${a[2]}s">${pix(PX[a[0]])}</div>`).join("");
+// terminal
+const lines=[["whoami","builder / trader / degen"],["current_focus","memecoins + on-chain tools"],["risk_management","questionable"],["status","still building"],["exit_liquidity","loading..."]];
+let ti=0;const tl=$("tl");if(matchMedia("(prefers-reduced-motion:reduce)").matches){tl.innerHTML=lines.map(l=>`<div><span class="c">$</span> ${l[0]}</div><div class="mu">${l[1]}</div>`).join("")}else{(function n(){if(ti>=lines.length)return;tl.insertAdjacentHTML("beforeend",`<div><span class="c">$</span> ${lines[ti][0]}</div><div class="mu">${lines[ti][1]}</div>`);ti++;setTimeout(n,700)})()}
+$("bg").onclick=()=>{const o=$("lk").classList.toggle("open");$("bg").setAttribute("aria-expanded",o)};
+$("lk").onclick=e=>{if(e.target.tagName=="A"){$("lk").classList.remove("open");$("bg").setAttribute("aria-expanded",false)}};
+
+// ===== calculator logic =====
+function parseNum(s){s=String(s).trim().toLowerCase().replace(/[$,\s]/g,"");if(!s)return NaN;const m=s.match(/^(\d*\.?\d+(?:e-?\d+)?)([kmbt])?$/);if(!m)return NaN;return parseFloat(m[1])*({k:1e3,m:1e6,b:1e9,t:1e12}[m[2]]||1)}
+function calc(v){const I=v.inv,e=v.en,s=v.se,c=v.cu,p=v.ps/100;const sm=s/e,hm=c/e;
+const sold=I*p,kept=I*(1-p),received=sold*sm,keptNow=kept*hm,actual=received+keptNow,hyp=I*hm,missed=hyp-actual;
+return{I,sm,hm,sold,kept,received,keptNow,actual,hyp,missed,gain:(hyp/I-1)*100,soldHyp:sold*hm,full:I*sm}}
+function usd(n){const a=Math.abs(n);if(!isFinite(n))return"—";const d=a>=1000?0:a>=1?2:a>0?4:0;return(n<0?"-":"")+"$"+a.toLocaleString("en-US",{maximumFractionDigits:d})}
+function compact(n){const a=Math.abs(n);if(a>=1e9)return"$"+(a/1e9).toFixed(2).replace(/\.?0+$/,"")+"B";if(a>=1e6)return"$"+(a/1e6).toFixed(2).replace(/\.?0+$/,"")+"M";if(a>=1e3)return"$"+(a/1e3).toFixed(1).replace(/\.0$/,"")+"K";return"$"+String(+a.toPrecision(4))}
+function mult(x){return(x>=100?x.toFixed(0):x>=10?x.toFixed(1).replace(/\.0$/,""):x.toFixed(2).replace(/0$/,"").replace(/\.$/,""))+"x"}
+function label(r,ps){if(ps==0)return"DIAMOND HANDS DETECTED";if(r.missed<=0)return"YOU ACTUALLY ESCAPED";const x=r.missed/r.I;return x<1?"MILD JEET":x<5?"CERTIFIED PAPER HANDS":x<20?"GENERATIONAL JEET":x<100?"THE CHART REMEMBERS":"YOU WERE THE EXIT LIQUIDITY"}
+function validate(raw){const er={},v={};
+v.inv=parseNum(raw.inv);if(!(v.inv>0))er.inv="Enter an amount above 0";
+["en","se","cu"].forEach(k=>{v[k]=parseNum(raw[k]);if(!(v[k]>0))er[k]="Must be above 0"});
+v.ps=raw.ps===""?100:parseNum(raw.ps);if(!(v.ps>=0&&v.ps<=100))er.ps="Use 0–100";
+["inv","en","se","cu"].forEach(k=>{if(v[k]>1e18)er[k]="Too large"});return{er,v}}
+
+let mode="mc",degen=false,cur=null,anim=0;
+const F=["inv","en","se","cu","ps"];
+function setMode(m){mode=m;$("mMc").setAttribute("aria-pressed",m=="mc");$("mPr").setAttribute("aria-pressed",m=="pr");const w=m=="mc"?"market cap":"price";$("l_en").textContent="Entry "+w;$("l_se").textContent="Sell "+w;$("l_cu").textContent="Current "+w;update()}
+function countTo(el,to,fmt){cancelAnimationFrame(anim);if(matchMedia("(prefers-reduced-motion:reduce)").matches){el.textContent=fmt(to);return}const t0=performance.now();(function f(t){const k=Math.min(1,(t-t0)/500);el.textContent=fmt(to*(1-Math.pow(1-k,3)));if(k<1)anim=requestAnimationFrame(f)})(t0)}
+function update(){const raw={};F.forEach(k=>raw[k]=$(k).value);
+const started=["inv","en","se","cu"].every(k=>raw[k].trim()!=="");
+const{er,v}=validate(raw);F.forEach(k=>$("e_"+k).textContent=(raw[k].trim()!==""||k=="ps")?(er[k]||""):"");
+if(!started||Object.keys(er).length){$("out").hidden=true;cur=null;return}
+const r=calc(v),tok=$("tok").value.trim()||"this coin",unit=mode=="mc"?"market cap":"price",fm=x=>mode=="mc"?compact(x):"$"+String(+x.toPrecision(5));
+cur={r,v,tok};$("out").hidden=false;
+const esc_=r.missed<=0;$("card").className="share"+(esc_?" esc":"");
+$("c_chain").textContent=$("chain").value.toUpperCase();
+$("c_lab").textContent=label(r,v.ps);
+const head=esc_?"YOU ACTUALLY ESCAPED":degen?"YOUR PAPER HANDS DONATED":"YOU JEETED";
+$("c_h").innerHTML=esc_?head:`${head} <span id="amt"></span>`;
+if(!esc_)countTo($("amt"),r.missed,usd);
+const soldPct=v.ps==100?"":` (${v.ps}% of position)`;
+$("c_txt").textContent=v.ps==0?`You haven't sold ${tok}. Holding ${usd(v.inv)} from ${fm(v.en)} to ${fm(v.cu)} is ${mult(r.hm)}. Diamond hands.`:esc_?`Holding ${tok} to ${fm(v.cu)} would not have beaten your sale, based on the values entered.`:`You sold ${tok} at ${fm(v.se)} ${unit}${soldPct}. If you held until ${fm(v.cu)}, your ${usd(v.inv)} position would be worth approximately ${usd(r.hyp)}. ${mult(r.hm)} from your entry.`;
+$("s_o").textContent=usd(r.I);$("s_vl").textContent="VALUE WHEN SOLD";$("s_s").textContent=usd(r.actual-r.keptNow+ (v.ps==0?0:0));
+$("s_hl").textContent=degen?"WHAT THE CHART OWED YOU":"HYPOTHETICAL VALUE";$("s_h").textContent=usd(r.hyp);$("s_m").textContent=mult(r.hm);
+$("s_s").textContent=usd(r.received);
+$("adv").innerHTML=[["Total original position",usd(r.I)],["Amount sold",usd(r.sold)],["Value received",usd(r.received)],["Remaining position",usd(r.kept)],["Remaining now (hyp.)",usd(r.keptNow)],["Total hypothetical",usd(r.hyp)],["Actual + remaining",usd(r.actual)],["Missed value",usd(r.missed)],["Sell multiple",mult(r.sm)],["Held gain %",r.gain.toFixed(1)+"%"]].map(a=>`<div><span>${a[0]}</span><b style="font-size:15px">${a[1]}</b></div>`).join("");
+const pts=[["ENTRY",r.I,fm(v.en),"var(--b)"],["SOLD",r.I*r.sm,fm(v.se),"var(--y)"],["NOW",r.hyp,fm(v.cu),"var(--g)"]],mx=Math.max(...pts.map(p=>p[1]));
+$("bars").innerHTML=pts.map(p=>`<div class="bar"><span>${usd(p[1])}</span><i style="height:${Math.max(2,p[1]/mx*115)}px;background:${p[3]}"></i><span class="mu">${p[0]}<br>${p[2]}</span></div>`).join("");
+$("bars").setAttribute("aria-label",`Hypothetical value: entry ${usd(r.I)}, sold ${usd(r.I*r.sm)}, current ${usd(r.hyp)}`)}
+function shareText(){if(!cur)return"";const{r,v,tok}=cur,ph=$("ph").value,mc=mode=="mc";const fm=x=>mc?compact(x):"$"+String(+x.toPrecision(5));
+if(r.missed<=0)return`I sold ${tok} and it actually saved me. Holding wouldn't have beaten my exit. 🧠\n\nifididntjeet`;
+return`${ph} ${tok} at ${fm(v.se)}.\n\nIt's now at ${fm(v.cu)}.\n\nMy ${usd(v.inv)} position would be worth ~${usd(r.hyp)}.\n\nI donated ${usd(r.missed)} to the chart.\n\nNever forget. 💀`}
+function say(t){$("msg").textContent=t}
+$("cp").onclick=async()=>{const t=shareText();try{await navigator.clipboard.writeText(t);say("Copied ✔")}catch(e){const a=document.createElement("textarea");a.value=t;document.body.appendChild(a);a.select();try{document.execCommand("copy");say("Copied ✔")}catch(_){say("Copy failed — long-press the card text")}a.remove()}};
+$("sh").onclick=()=>{const t=shareText();if(t)window.open("https://twitter.com/intent/tweet?text="+encodeURIComponent(t),"_blank","noopener")};
+function setVals(o){F.forEach(k=>$(k).value=o[k]);$("tok").value=o.tok||"";update()}
+const ex=()=>{setMode("mc");setVals({tok:"$MOONCAT",inv:"50",en:"500k",se:"1m",cu:"10m",ps:"100"})};
+$("ex1").onclick=()=>{ex();$("calc").scrollIntoView()};$("ex2").onclick=ex;
+$("rs").onclick=()=>{setVals({tok:"",inv:"",en:"",se:"",cu:"",ps:"100"});$("ca").value="";$("cn").hidden=true;say("")};
+$("mMc").onclick=()=>setMode("mc");$("mPr").onclick=()=>setMode("pr");
+$("dg").onclick=()=>{degen=!degen;$("dg").setAttribute("aria-pressed",degen);update()};
+$("ca").oninput=async()=>{const has=$("ca").value.trim().length>0;$("cn").hidden=!has;if(has)await lookupToken($("ca").value,$("chain").value)};
+[...F,"tok","chain","ph"].forEach(k=>$(k).addEventListener("input",update));
+</script></body></html>
